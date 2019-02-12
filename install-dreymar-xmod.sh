@@ -257,7 +257,7 @@ fi
 if [ "${SetXMap}" != 'yes' ]; then
 	MyMsg "XKBmap activation skipped" "" '1;33;40'
 else
-	bash ./setxkb.sh -d "${XKBDir}" ${SetXStr} || MyError "setxkb.sh failed!"
+	bash ./setxkb.sh -o 'ctrl:nocaps' -d "${XKBDir}" ${SetXStr} || MyError "setxkb.sh failed!"
 fi
 
 MyMsg "${MyNAME} finished!" "\n"

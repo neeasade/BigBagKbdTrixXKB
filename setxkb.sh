@@ -194,10 +194,10 @@ MyCD "${XKBdir%/}"
 
 ## Check for root privileges (if not root, needs the sudo command)
 DoSudo=''
-if [ "$EUID" -ne 0 ]; then # or [ `whoami` = 'root' ]; not root, so test for sudo instead
-    ( command -v sudo >/dev/null 2>&1 ) || MyError "Need root access and sudo won't run!"
-    DoSudo='sudo'
-fi
+# if [ "$EUID" -ne 0 ]; then # or [ `whoami` = 'root' ]; not root, so test for sudo instead
+#     ( command -v sudo >/dev/null 2>&1 ) || MyError "Need root access and sudo won't run!"
+#     DoSudo='sudo'
+# fi
 
 ## Purge the old xkb server files
 if [ ${KeepXKM} == 'no' ]; then
@@ -250,6 +250,10 @@ exit 0
 #~ -model pc104wide-qu, \
 #~ -layout "us(cmk_ed_us)", \
 #~ -option "misc:extend,lv5:caps_switch_lock"
+
+#~ setxkbmap -model pc104wide-qu -layout "us(cmk_ed_us)" -option "misc:extend,lv5:caps_switch_lock"
+
+
 
 ## Euro/ISO AngleWide ergo mod,
 ## Norwegian Cmk[eD] "US" layout (grp1),
