@@ -20,7 +20,8 @@ default xkb_keycodes "evdev" {
 	<AE10> = 19;
 	<AE11> = 20;
 	<AE12> = 21;
-	<BKSP> = 22;
+	// <BKSP> = 22;
+	<BKSP> = 51;
 
 	<TAB> = 23;
 	<AD01> = 24;
@@ -35,7 +36,8 @@ default xkb_keycodes "evdev" {
 	<AD10> = 33;
 	<AD11> = 34;
 	<AD12> = 35;
-	<BKSL> = 51;
+	// <BKSL> = 51;
+	<BKSL> = 22;
 	alias <AC12> = <BKSL>;
 	<RTRN> = 36;
 

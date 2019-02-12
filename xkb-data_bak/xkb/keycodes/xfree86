@@ -3,7 +3,8 @@
 
 default xkb_keycodes "xfree86" {
     include "xfree86(basic)"
-    <BKSL> =  51;
+    // <BKSL> =  51;
+    <BKSL> =  22;
     alias <AC12> = <BKSL>;
     <LSGT> =  94;
 };
@@ -27,7 +28,8 @@ xkb_keycodes "basic" {
     <AE10> =  19;
     <AE11> =  20;
     <AE12> =  21;
-    <BKSP> =  22;
+    // <BKSP> =  22;
+    <BKSP> =  51;
 
     <TAB>  =  23;
     <AD01> =  24;
