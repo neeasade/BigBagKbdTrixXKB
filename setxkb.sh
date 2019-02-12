@@ -200,18 +200,22 @@ DoSudo=''
 # fi
 
 ## Purge the old xkb server files
-if [ ${KeepXKM} == 'no' ]; then
-	MyPoint "Looking for and removing any old .xkm server files"
-	${DoSudo} rm -f /var/lib/xkb/server-*.xkm || MyPoint "No .xkm files removed"
-fi
+# if [ ${KeepXKM} == 'no' ]; then
+# 	MyPoint "Looking for and removing any old .xkm server files"
+# 	${DoSudo} rm -f /var/lib/xkb/server-*.xkm || MyPoint "No .xkm files removed"
+# fi
 
 ## Clear the xkb options (to avoid duplicates)
-setxkbmap -option ''
+# this appears to fail?
+# setxkbmap -option ''
 
 ## Run the actual setxkbmap command
-MySetXKB="-model ${XKBmodel} -layout ${XKBlayout} -option ${XKBoption} -v ${VerboseLvl}"
+MySetXKB="-I${XKBdir} -model ${XKBmodel} -layout ${XKBlayout} -option ${XKBoption} -print"
 MyPoint "Running setxkbmap:\n"
+# cf https://unix.stackexchange.com/questions/397716/custom-keyboard-layout-without-root
+echo setxkbmap $MySetXKB
 setxkbmap $MySetXKB
+setxkbmap $MySetXKB | xkbcomp -I"${XKBdir}" - "$DISPLAY"
 MyEcho ""
 
 ## Add the setxkbmap command to a file, if specified (Note the special format for MySetXKB!)

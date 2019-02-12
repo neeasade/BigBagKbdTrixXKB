@@ -3,7 +3,7 @@
 
 default xkb_keycodes "xfree86" {
     include "xfree86(basic)"
-    <BKSL> =  51;
+    // <BKSL> =  51;
     alias <AC12> = <BKSL>;
     <LSGT> =  94;
 };
@@ -27,7 +27,7 @@ xkb_keycodes "basic" {
     <AE10> =  19;
     <AE11> =  20;
     <AE12> =  21;
-    <BKSP> =  22;
+    // <BKSP> =  22;
 
     <TAB>  =  23;
     <AD01> =  24;
@@ -423,6 +423,35 @@ xkb_keycodes "pc104angle-z" {
     augment "xfree86(xfree86)"
 };
 
+// KeyPress event, serial 37, synthetic NO, window 0x2200001,
+//     root 0x145, subw 0x0, time 2637967, (432,439), root:(432,503),
+//     state 0x0, keycode 64 (keysym 0xffe9, Alt_L), same_screen YES,
+//     XLookupString gives 0 bytes:
+//     XmbLookupString gives 0 bytes:
+//     XFilterEvent returns: False
+
+// KeyRelease event, serial 37, synthetic NO, window 0x2200001,
+//     root 0x145, subw 0x0, time 2638038, (432,439), root:(432,503),
+//     state 0x8, keycode 64 (keysym 0xffe9, Alt_L), same_screen YES,
+//     XLookupString gives 0 bytes:
+//     XFilterEvent returns: False
+
+// KeyPress event, serial 37, synthetic NO, window 0x2200001,
+//     root 0x145, subw 0x0, time 2638461, (432,439), root:(432,503),
+//     state 0x0, keycode 24 (keysym 0x71, q), same_screen YES,
+//     XLookupString gives 1 bytes: (71) "q"
+//     XmbLookupString gives 1 bytes: (71) "q"
+//     XFilterEvent returns: False
+
+// KeyRelease event, serial 37, synthetic NO, window 0x2200001,
+//     root 0x145, subw 0x0, time 2638516, (432,439), root:(432,503),
+//     state 0x0, keycode 24 (keysym 0x71, q), same_screen YES,
+//     XLookupString gives 1 bytes: (71) "q"
+//     XFilterEvent returns: False
+
+// ClientMessage event, serial 37, synthetic YES, window 0x2200001,
+//     message_type 0x13d (WM_PROTOCOLS), format 32, message 0x13b (WM_DELETE_WINDOW)
+
 // pc104_CurlAngle(Z) ergonomic mod (by DreymaR, 2017)
 xkb_keycodes "pc104curl-z" {
 
@@ -431,6 +460,16 @@ xkb_keycodes "pc104curl-z" {
     <AB05> =  54;	// B	<  C
     <AB04> =  55;	// V	<  V
     <AB01> =  56;	// Z	<  B
+
+    // neeasade's stuff
+    // https://www.charvolant.org/doug/xkb/html/img3.png
+    // get the code from xev.
+    // why doesn't this work
+    <BKSP> =  51;
+    <BKSL> =  22;
+
+    // <LWIN> = <LALT>;
+    // <LALT> = <LWIN>;
 
     augment "xfree86(xfree86)"
 };
