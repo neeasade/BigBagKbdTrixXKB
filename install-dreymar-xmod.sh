@@ -233,7 +233,8 @@ for That in ${SubDirs}; do
 		MyPoint "Installing mod files in '${MyDir}'"
 		MyWarning "It seems that setxkbmap w/ local dir isn't working now?!"
 		${DoSudo} mkdir -p "${MyDir}" || MyError "Can't make '${MyDir}'!"
-		${DoSudo} cp -a "${X11DIR}/${That}/"* "${MyDir}" 2>/dev/null || MyError "Local files copy error!"
+		# todo: revisit this/better locator to copy on nixos
+		# ${DoSudo} cp -a "${X11DIR}/${That}/"* "${MyDir}" 2>/dev/null || MyError "Local files copy error!"
 		${DoSudo} cp -a "${DModDir}/${That}/"* "${MyDir}" 2>/dev/null \
 			&& MyPoint "Local install done" || MyError "Local files copy error!"
 		XKBDir="${InstDir%/}/${DModFix}xkb"	# Prepare for setxkbmap
