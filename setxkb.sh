@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ## ======================================================
 ## ===  SETXKB.sh to set the XKB keyboard options     ===

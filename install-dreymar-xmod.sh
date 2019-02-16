@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ## =================================================================
 ## ===  INSTALL-DREYMAR-XMOD.sh for DreymaR's XKB modifications  ===

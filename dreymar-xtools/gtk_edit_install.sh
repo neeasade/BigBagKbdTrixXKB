@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # ======================================================
 # ===  installgtk.sh to enable cut/copy/paste keys   ===

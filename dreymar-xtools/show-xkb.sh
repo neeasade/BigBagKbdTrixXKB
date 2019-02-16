@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # =====================================================
 # ===  SHOW-XKB.sh for DreymaR's XKB modifications  ===
