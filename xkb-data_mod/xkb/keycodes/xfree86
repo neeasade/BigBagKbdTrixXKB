@@ -72,14 +72,20 @@ xkb_keycodes "basic" {
     <AB10> =  61;
     <RTSH> =  62;
 
-    <LALT> =  64;
+
     <LCTL> =  37;
     <SPCE> =  65;
     <RCTL> = 109;
-    <RALT> = 113;
+
+
     // Microsoft keyboard extra keys
-    <LWIN> = 115;
-    <RWIN> = 116;
+
+    <LWIN> =  64;
+    <LALT> = 115;
+
+    <RWIN> = 113;
+    <RALT> = 116;
+
     <MENU> = 117;
 
     <ESC>  =   9;
@@ -442,6 +448,8 @@ xkb_keycodes "pc104curl-z" {
 
     // <LWIN> = <LALT>;
     // <LALT> = <LWIN>;
+    // <RWIN> = <RALT>;
+    // <RALT> = <RWIN>;
 
     augment "xfree86(xfree86)"
 };
